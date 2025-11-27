@@ -8,7 +8,7 @@ namespace HIDrogen
 #if UNITY_2022_2_OR_NEWER
         private static XInputBackend s_XInputBackend;
 #endif
-        private static GameInputBackend s_GameInputBackend;
+        //private static GameInputBackend s_GameInputBackend;
         private static USBBackend s_USBBackend;
 
         static partial void PlatformInitialize()
@@ -16,7 +16,7 @@ namespace HIDrogen
 #if UNITY_2022_2_OR_NEWER
             TryInitializeBackend(ref s_XInputBackend);
 #endif
-            TryInitializeBackend(ref s_GameInputBackend);
+            //TryInitializeBackend(ref s_GameInputBackend);
             TryInitializeBackend(ref s_USBBackend);
         }
 
@@ -26,7 +26,7 @@ namespace HIDrogen
 #if UNITY_2022_2_OR_NEWER
             TryUninitializeBackend(ref s_XInputBackend);
 #endif
-            TryUninitializeBackend(ref s_GameInputBackend);
+            //TryUninitializeBackend(ref s_GameInputBackend);
             TryUninitializeBackend(ref s_USBBackend);
         }
     }
